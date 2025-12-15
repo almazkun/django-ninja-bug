@@ -21,6 +21,11 @@ class ResponseSchemaExclude(ModelSchema):
         exclude = ["id"]
 
 
+inst = Response.objects.all().first()
+print("\n\nResponseSchemaField", ResponseSchemaField.from_orm(inst))
+print("ResponseSchemaExclude", ResponseSchemaExclude.from_orm(inst))
+
+
 api = NinjaAPI()
 
 
